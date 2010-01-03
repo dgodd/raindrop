@@ -1,0 +1,8 @@
+<h1>Professionals</h1>
+<p><%= link_to 'New person', new_person_path %></p>
+
+<% @people.each do |person| %>
+<h1><%= link_to person, person %></h1> 
+<div><%= person.body %></div>
+<hr>
+<% end %>

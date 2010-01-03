@@ -1,0 +1,16 @@
+<h1>New Event</h1>
+
+ <% semantic_form_for @event do |form| %>
+    <% form.inputs do %>
+      <%= form.input :start %>
+      <%= form.input :end %>
+      <%= form.input :course_id %>
+      <%= form.input :city %>
+      <%= form.input :suburb %>
+      <%= form.input :state %>
+      <%= form.input :person_id %>
+    <% end %>
+    <% form.buttons do %>
+      <%= form.commit_button %>
+    <% end %>
+  <% end %>

@@ -1,0 +1,7 @@
+<p><%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %></p>
+
+<h1><%= link_to @event, @event.course %></h1>
+<div><%= @event.start %> - <%= @event.end %></div>
+<div><%= @event.city %>, <%= @event.suburb %>, <%= @event.state %></div>
+<div><%= link_to @event.person, @event.person %></div>

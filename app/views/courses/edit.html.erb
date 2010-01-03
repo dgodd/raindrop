@@ -1,0 +1,17 @@
+<h1>Editing course</h1>
+<p><%= link_to 'Show', @course %> |
+<%= link_to 'Back', courses_path %></p>
+
+ <% semantic_form_for @course do |form| %>
+    <%= form.error_messages %>
+    <% form.inputs do %>
+      <%= form.input :type %>
+      <%= form.input :prereq %>
+      <%= form.input :title %>
+      <%= form.input :body, :as=>:text %>
+    <% end %>
+    <% form.buttons do %>
+      <%= form.commit_button %>
+    <% end %>
+  <% end %>
+

@@ -1,0 +1,9 @@
+<h1>Courses</h1>
+<p><%= link_to 'New course', new_course_path %></p>
+
+<% @courses.each do |course| %>
+<h1><%= link_to course.title, course %></h1> 
+<div><%= course.prereq %></div>
+<div><%= course.body %></div>
+<hr>
+<% end %>

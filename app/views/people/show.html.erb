@@ -1,0 +1,9 @@
+<p><%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %></p>
+
+<%- if @person.avatar? -%><span style="float:right;filter:alpha(opacity=100); -moz-opacity:1.0; opacity:1.0; -moz-border-radius: 15px; -webkit-border-radius: 15px; border: 10px solid #ff3;"><%= image_tag @person.avatar.url, :style=>'float:right;filter:alpha(opacity=100); -moz-opacity:1.0; opacity:1.0;' %></span><%- end -%>
+<h1><%= @person %></h1> 
+<div><%= @person.body %></div>
+<%- if @person.is_trainer && @person.trainer.present? -%>
+<div><%= @person.trainer %></div>
+<%- end -%>

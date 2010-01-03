@@ -1,0 +1,15 @@
+development: &global_settings
+  database: raindrop
+  username: 
+  password: 
+  host: 127.0.0.1
+  port: 27017
+
+test:
+  database: my_app_test
+  <<: *global_settings
+
+production:
+  database: cms
+  <<: *global_settings
+
